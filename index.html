@@ -192,6 +192,44 @@
 <!-- End paper abstract -->
 
 <hr>
+<div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+        <h2 class="title is-3">Simulation tasks and real robot tasks descriptions</h2>
+        <br>
+        <div class="image-container">
+            <img src="static/images/sim_tasks.png" alt="Image 1">
+            <img src="static/images/real_robot_tasks.png" alt="Image 2">
+        </div>
+        <div class="content has-text-justified">
+            <center><strong>Table. Full task descriptions (left: simulation tasks, right: real robot tasks)</strong>
+            </center>
+        </div>
+
+
+    </div>
+</div>
+
+<hr>
+<div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+        <h2 class="title is-3">Ablation studies</h2>
+        <br>
+        <div class="content has-text-justified">
+            <p>
+                To evaluate the choice of adapting the value matrice (V), query matrices (Q) and feed-forward layers
+                (O), we compare its performance to the performances of adapting key matrices (K) and policy head (P). As
+                shown in the table below. Additional adapting key matrices and policy head yield similar performance to
+                our choice, but they will introduce more training parameters and GPU memory occupation during the
+                training.
+            </p>
+        </div>
+        <img src="static/images/ab.png" style="width: 25%;">
+
+    </div>
+</div>
+
+<hr>
+
 
 <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
@@ -255,223 +293,11 @@
         <br>
         <h2 class="title is-3">Rollouts with random layouts</h2>
         <video class="video-player" autoplay controls muted loop>
-        <source src="./static/videos/random_mani_clip.mp4" type="video/mp4"> <!-- MP4 Video -->
+            <source src="./static/videos/random_mani_clip.mp4" type="video/mp4"> <!-- MP4 Video -->
         </video>
     </div>
 </div>
 
-
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    &lt;!&ndash; Motivation. &ndash;&gt;-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Motivation</h2>-->
-<!--        <br>-->
-<!--        <img src="./static/images/motivation.png" style="width: 75%;">-->
-<!--        <div class="content has-text-justified">-->
-<!--          <strong>Figure 1.</strong>-->
-<!--          Unlike prior works which attempt to predict the next state for learning mapping functions, which is reported to be prone to compounding errors,-->
-<!--          we aim to align the effect of the transitions across domains.-->
-<!--          For instance, the effect of transition in Domain A is moving the gripper from the left side to the right side.-->
-<!--          The effect of the translated transition in the Domain B is expected to move the gripper from the left side to the right side as well.-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash;/ Motivation. &ndash;&gt;-->
-
-<!--    <br>-->
-<!--    <hr>-->
-<!--    <br>-->
-
-<!--    &lt;!&ndash; Method Overview. &ndash;&gt;-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Method Overview</h2>-->
-<!--        <br>-->
-<!--        <img src="./static/images/method_ill.png" style="width: 75%;">-->
-<!--        <div class="content has-text-justified">-->
-<!--          <strong>Figure 2.</strong> We show the main terminologies from both the source domain and the target domains, and the main objective in our method.-->
-
-<!--        </div>-->
-<!--        <br>-->
-<!--        <img src="./static/images/structure.png" style="width: 100%;">-->
-<!--        <div class="content has-text-justified">-->
-<!--          <strong>Figure 3.</strong> The training structure. We apply the same objectives of learning mapping functions from source domains to target domains to learning from target domains to source domains.-->
-<!--          We attempt to discover the translated action distribution that can lead to the same effect in the target domain as the source domain.-->
-
-<!--        </div>-->
-
-<!--      </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash;/ Method Overview. &ndash;&gt;-->
-<!--    <br>-->
-<!--    <hr>-->
-<!--    <br>-->
-
-<!-- results. -->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Experiment Results</h2>-->
-<!--        <br>-->
-<!--        <img src="./static/images/tasks.png" style="width: 100%;">-->
-<!--        <div class="content has-text-justified">-->
-<!--          <strong>Figure 4.</strong>-->
-<!--          Visualization of source domains and target domains. We carried out experiments on three locomotion tasks and two robotic manipulation tasks-->
-
-<!--        </div>-->
-<!--        <br>-->
-<!--        <img src="./static/images/results.png" style="width: 100%;">-->
-<!--        <div class="content has-text-justified">-->
-<!--          <strong>TABLE I</strong> The performance of the transferred policy under different morphologies. (w.o. denotes without)-->
-
-<!--        </div>-->
-<!--        <br>-->
-
-<!--        <img src="./static/images/icra_sup_demo.gif" style="width: 100%;">-->
-<!--        <div class="content has-text-justified">-->
-<!--          The behaviours of the transferred policies through the learned mapping functions.-->
-
-<!--        </div>-->
-
-
-<!--      </div>-->
-<!--    </div>-->
-<!-- results end. -->
-
-<!--  </div>-->
-<!--</section>-->
-
-<!-- Image carousel -->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--       <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/method_ill.png" style="width: 750%;" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--          First image description.-->
-<!--        </h2>-->
-<!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/structure.png" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--          Second image description.-->
-<!--        </h2>-->
-<!--      </div>-->
-
-<!--  </div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<!-- End image carousel -->
-
-
-<!-- Youtube video -->
-<!--<section class="hero is-small is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
-<!--      <h2 class="title is-3">Video Presentation</h2>-->
-<!--      <div class="columns is-centered has-text-centered">-->
-<!--        <div class="column is-four-fifths">-->
-<!--          -->
-<!--          <div class="publication-video">-->
-<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
-<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <h2 class="title is-3">Another Carousel</h2>-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--        <div class="item item-video1">-->
-<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel1.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-video2">-->
-<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel2.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-video3">-->
-<!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel3.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!-- End video carousel -->
-
-
-<!-- Paper poster -->
-<!--<section class="hero is-small is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <h2 class="title">Poster</h2>-->
-
-<!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
-<!--          </iframe>-->
-<!--        -->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-<!--  <section class="section" id="BibTeX">-->
-<!--    <div class="container is-max-desktop content">-->
-<!--      <h2 class="title">BibTeX</h2>-->
-<!--      <pre><code>BibTex Code Here</code></pre>-->
-<!--    </div>-->
-<!--</section>-->
-<!--End BibTex citation -->
-
-
-<!--  <footer class="footer">-->
-<!--  <div class="container">-->
-<!--    <div class="columns is-centered">-->
-<!--      <div class="column is-8">-->
-<!--        <div class="content">-->
-
-<!--          <p>-->
-<!--            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.-->
-<!--            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative-->
-<!--            Commons Attribution-ShareAlike 4.0 International License</a>.-->
-<!--          </p>-->
-
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</footer>-->
-
-<!-- Statcounter tracking code -->
-
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-<!-- End of Statcounter Code -->
 
 </body>
 </html>
