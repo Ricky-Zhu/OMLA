@@ -53,8 +53,8 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">Efficient Continual Adaptation of Large Robotic
-                        Policy with Online Meta-Learned Adaptors</h1>
+                    <h1 class="title is-1 publication-title">Efficient Continual Adaptation of Pretrained Robotic Policy with
+                        Online Meta-Learned Adapters</h1>
                     <div class="is-size-5 publication-authors">
                         <!-- Paper authors -->
                         <span class="author-block">
@@ -146,7 +146,7 @@
         <div class="hero-body">
             <video poster="" id="tree" autoplay controls muted loop height="100%">
                 <!-- Your video here -->
-                <source src="static/videos/ral_supp.mp4"
+                <source src="static/videos/iros_supp.mp4"
                         type="video/mp4">
             </video>
             <!--      <h2 class="subtitle has-text-centered">-->
@@ -165,24 +165,23 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                        Recent research on large robotic policy models pretrained across diverse tasks has demonstrated
-                        that these models can adapt to new tasks with significantly fewer demonstrations as compared to
-                        learning from scratch. This reduced need for in-domain data makes these large models excellent
-                        backbones for continual adaptation—a crucial capability for general autonomous agents. For
-                        instance, a household robot must adapt to a range of unseen tasks as required by every
-                        household. Conventional methods for continual adaptation often require tuning the entire model's
-                        parameters, rendering them impractical for large robotic policy models. To address this,
-                        adaptors from the field of Large Language Models (LLMs) have been shown to effectively adjust
-                        large models using a relatively small number of parameters. These adaptors are task-specific,
-                        which helps avoid common issues such as catastrophic forgetting during continual adaptation.
-                        However, directly applying these adaptors does not facilitate knowledge transfer from previously
-                        learned tasks. To overcome this limitation, we propose <b><i>Online Meta-Learned Adaptors
-                        (OMLA)</i></b> for
-                        the continual adaptation of large robotic policy models. OMLA enables knowledge transfer through
-                        a novel meta-learning objective. We validated the outperformances of the proposed approach
-                        through extensive experiments in both simulated and real-world environments. These findings
-                        suggest that OMLA offers a promising direction for efficient and continual adaptation in large
-                        robotic policy models.
+                        Continual adaptation is essential for general autonomous agents. For example, a household robot pretrained
+                        with a repertoire of skills must still adapt to unseen tasks
+                        specific to each household. Motivated by this, building upon
+                        parameter-efficient fine-tuning in language models, prior works
+                        have explored lightweight adapters to adapt pretrained policies,
+                        which can preserve learned features from the pretraining phase
+                        and demonstrate good adaptation performances. However, these
+                        approaches treat task learning separately, limiting knowledge
+                        transfer between tasks. In this paper, we propose <b><i>Online Meta-
+                        Learned adapters (OMLA)</i></b>. Instead of applying adapters di-
+                        rectly, OMLA can facilitate knowledge transfer from previously
+                        learned tasks to current learning tasks through a novel meta-
+                        learning objective. Extensive experiments in both simulated
+                        and real-world environments demonstrate that OMLA can lead
+                        to better adaptation performances compared to the baseline
+                        methods.
+
                     </p>
                 </div>
             </div>
@@ -192,7 +191,7 @@
 <!-- End paper abstract -->
 
 <hr>
-<div class="columns is-centered has-text-centered">
+<!-- <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
         <h2 class="title is-3">Simulation tasks and real robot tasks descriptions</h2>
         <br>
@@ -209,8 +208,8 @@
     </div>
 </div>
 
-<hr>
-<div class="columns is-centered has-text-centered">
+<hr> -->
+<!-- <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
         <h2 class="title is-3">Ablation studies</h2>
         <br>
@@ -228,7 +227,7 @@
     </div>
 </div>
 
-<hr>
+<hr> -->
 
 
 <div class="columns is-centered has-text-centered">
