@@ -160,5 +160,56 @@ body {
     height: auto; /* Maintain aspect ratio */
 }
 
+.paper-figure {
+    margin: 1.5rem 0;
+}
 
+.paper-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background: #fff;
+}
 
+.paper-figure figcaption {
+    color: #555;
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+}
+
+.highlight-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 1.5rem 0;
+}
+
+.highlight-item {
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    padding: 1rem;
+    background: #fff;
+}
+
+.highlight-item strong {
+    display: block;
+    color: #363636;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.highlight-item span {
+    display: block;
+    color: #555;
+    margin-top: 0.4rem;
+}
+
+.real-results-table {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+}
